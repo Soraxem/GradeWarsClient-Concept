@@ -2,6 +2,12 @@
 
 <task format="1" values="static">
 	<text>10 * 20</text>
+	<text>Hello World</text>
+	<options>
+		<option>420</option>
+		<option>69</option>
+		<option>200</option>
+	</options>
 	<options>
 		<option>420</option>
 		<option>69</option>

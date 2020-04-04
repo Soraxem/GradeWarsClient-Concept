@@ -1,0 +1,28 @@
+div.container {
+	position: relative;
+	width: 100%;
+	height: 60%;
+}
+
+.task {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: auto;
+	width: 100%;
+	
+	text-align: center;
+	transition: 0.5s;
+	opacity: 1;
+}
+
+.center {
+	text-align: center;
+	margin-left: auto; 
+    margin-right: auto;
+}
+
+.temp {
+	background-color: black;
+	color: red;
+}
