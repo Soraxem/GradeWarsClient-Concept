@@ -2,6 +2,7 @@ import os
 import platform
 import sys
 import time
+import requests
 import xml.etree.ElementTree as ET
 
 # Use latest version of Eel from parent directory
@@ -15,6 +16,12 @@ eel.init('web', allowed_extensions=['.js', '.html'])
 
 tree = ET.parse('Task1.xml')
 root = tree.getroot()
+
+
+url = "http://beringen.odenwilusenz.ch:25577/kak.php"
+myobj = {'': 'Der Hannes'}
+x = requests.post(url, data = myobj)
+print(x.text)
 
 def loadTaskFormat1():
     global tree
