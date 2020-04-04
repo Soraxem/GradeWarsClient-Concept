@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<task format="1" values="static">
+	<text>10 * 20</text>
+	<options>
+		<option>420</option>
+		<option>69</option>
+		<option>200</option>
+	</options>
+</task>
