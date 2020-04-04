@@ -22,3 +22,14 @@ function unload(){
 	document.getElementById("imgTask").style.opacity = 0;
 	document.getElementById("taskFormat3").style.opacity = 0;
 }
+
+
+function debugShowTaskFormat1(){
+	document.getElementById("textTask").style.opacity = 1;
+	document.getElementById("imgTask").style.opacity = 0;
+}
+
+function debugHideTaskFormat1(){
+	document.getElementById("textTask").style.opacity = 0;
+	document.getElementById("imgTask").style.opacity = 0;
+}
