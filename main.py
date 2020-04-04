@@ -23,7 +23,7 @@ myobj = {'': 'Der Hannes'}
 x = requests.post(url, data = myobj)
 print(x.text)
 
-def loadTaskFormat1():
+def loadtextTask():
     global tree
     global root
     text = ""
@@ -42,7 +42,7 @@ def loadTaskFormat1():
 
         table = table + "</tr>"
     #table completed
-    eel.loadTaskFormat1(text, table)
+    eel.loadtextTask(text, table)
 
 @eel.expose
 def answer(value, form):
@@ -58,8 +58,8 @@ def load():
     if (root.tag != "task"):
         print("Error! False root argument -> it Has to be 'task' not: '" + root.tag + "'")
     else:
-        if (root.attrib["format"] == "1"):
-            loadTaskFormat1()
+        if (root.attrib["type"] == "text"):
+            loadtextTask()
 
 
 
