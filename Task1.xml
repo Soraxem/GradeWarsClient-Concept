@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<task format="1" values="static">
+<task format="1">
 	<text>10 * 20</text>
 	<text>Hello World</text>
 	<options>

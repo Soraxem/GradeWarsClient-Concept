@@ -16,23 +16,22 @@ tree = ET.parse('Task1.xml')
 root = tree.getroot()
 
 def loadTaskFormat1():
-    if (root.attrib["values"] == "static"):
-        text = ""
-        for t in root.findall("text"): #add linebreaks
-            text = text + t.text + "</br>"
+    text = ""
+    for t in root.findall("text"): #add linebreaks
+        text = text + t.text + "</br>"
         text = text[:-5:] #delete last Linebreak
         #Text Completed
 
-        table = "" #table init
-        for options in root.findall("options"):
-            table = table + "<tr>"
-            for option in options.findall("option"):
-                table = table + "<td>" + option.text + "</td>"
+    table = "" #table init
+    for options in root.findall("options"):
+        table = table + "<tr>"
+        for option in options.findall("option"):
+            table = table + "<td>" + option.text + "</td>"
 
-            table = table + "</tr>"
-        #table completed
-        print("Test")
-        eel.loadTaskFormat1(text, table)
+        table = table + "</tr>"
+    #table completed
+    print("Test")
+    eel.loadTaskFormat1(text, table)
 
 @eel.expose
 def load():
