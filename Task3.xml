@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+
+<task type="text" reply-type="input" input-type="text">
+	<text>10 * 20</text>
+	<text>Hello World</text>
+</task>
