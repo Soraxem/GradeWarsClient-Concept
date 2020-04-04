@@ -13,16 +13,21 @@ div.container {
 	
 	text-align: center;
 	transition: 0.5s;
-	opacity: 1;
+	opacity: 0;
 }
 
 .center {
 	text-align: center;
 	margin-left: auto; 
     margin-right: auto;
+	cursor: pointer;
 }
 
 .temp {
 	background-color: black;
 	color: red;
+}
+
+td {
+	transition: 0.5s;
 }

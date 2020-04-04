@@ -1,6 +1,7 @@
 import os
 import platform
 import sys
+import time
 import xml.etree.ElementTree as ET
 
 # Use latest version of Eel from parent directory
@@ -16,25 +17,35 @@ tree = ET.parse('Task1.xml')
 root = tree.getroot()
 
 def loadTaskFormat1():
+    global tree
+    global root
     text = ""
     for t in root.findall("text"): #add linebreaks
         text = text + t.text + "</br>"
-        text = text[:-5:] #delete last Linebreak
-        #Text Completed
+    text = text[:-5:] #delete last Linebreak
+    #Text Completed
 
     table = "" #table init
+    i = 0
     for options in root.findall("options"):
         table = table + "<tr>"
         for option in options.findall("option"):
-            table = table + "<td>" + option.text + "</td>"
+            table = table + '<td onclick="eel.answer(' + str(i) +',1)">' + option.text + "</td>"
+            i += 1
 
         table = table + "</tr>"
     #table completed
-    print("Test")
     eel.loadTaskFormat1(text, table)
 
 @eel.expose
+def answer(value, form):
+    print("taskformat" + str(form) + " awnsered:" + str(value) )
+
+
+@eel.expose
 def load():
+    global tree
+    global root
     tree = ET.parse('Task1.xml')
     root = tree.getroot()
     if (root.tag != "task"):
@@ -46,19 +57,3 @@ def load():
 
 
 eel.start('index.html', mode='chrome')
-
-
-
-
-
-
-
-# # Launching Edge can also be gracefully handled as a fall back
-# try:
-#     eel.start('hello.html', mode='chrome-app', size=(300, 200))
-# except EnvironmentError:
-#     # If Chrome isn't found, fallback to Microsoft Edge on Win10 or greater
-#     if sys.platform in ['win32', 'win64'] and int(platform.release()) >= 10:
-#         eel.start('hello.html', mode='edge')
-#     else:
-#         raise
