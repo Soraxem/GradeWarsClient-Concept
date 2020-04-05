@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<task type="text" reply-type="multiple">
+<task type="text" reply-type="options">
 	<text>10 * 20</text>
 	<text>Hello World</text>
 	<options>
