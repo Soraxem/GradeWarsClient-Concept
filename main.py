@@ -11,8 +11,7 @@ import eel
 
 # Use the same static files as the original Example
 
-# Set web files folder and optionally specify which file types to check for eel.expose()
-eel.init('web', allowed_extensions=['.js', '.html'])
+
 
 tree = ET.parse('Task1.xml')
 root = tree.getroot()
@@ -103,7 +102,11 @@ def answer(value, form):
         print("taskformat" + str(form) + " awnsered:" + str(value) )
     elif (form == 2):
         print("taskformat" + str(form) + " awnsered:" + str(value) )
-    
+
+@eel.expose
+def loginSubmit(user, password, save):
+    print("got login Submit:" + user + password + str(save))
+
 
 @eel.expose
 def load():
@@ -120,5 +123,6 @@ def load():
             loadImgTask()
 
 
-
+# Set web files folder and optionally specify which file types to check for eel.expose()
+eel.init('web', allowed_extensions=['.js', '.html'])
 eel.start('index.html', mode='chrome')

@@ -4,6 +4,35 @@ div.container {
 	height: 60%;
 }
 
+div.login {
+	left: calc(50% - 150px);/*calc(position - width/2) */
+	top: calc(50% - 200px); /*calc(position - height/2)*/
+	position: fixed;
+	background-color: red;
+	width: 300px;
+	height: 400px;
+	margin: auto;
+	display: none;
+}
+
+div.load {
+	left: calc(50% - 50px);/*calc(position - width/2) */
+	top: calc(50% - 50px); /*calc(position - height/2)*/
+	position: fixed;
+	width: 100px;
+	height: 100px;
+	margin: auto;
+	display: none;
+}
+img.load {
+	left: calc(50% - 50px);/*calc(position - width/2) */
+	top: calc(50% - 50px); /*calc(position - height/2)*/
+	position: fixed;
+	width: 100px;
+	height: 100px;
+	margin: auto;
+}
+
 .task {
 	position: absolute;
 	left: 0;

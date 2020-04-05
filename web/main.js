@@ -96,6 +96,37 @@ function loadImgTaskNumber(text, url){
 	document.getElementById("imgTaskImg").src = url;
 }
 
+eel.expose(showLogin)
+function showLogin (){
+	document.getElementById("login").style.display = "Block";
+	document.getElementById("login").style.zIndex = 200;
+}
+eel.expose(hideLogin)
+function hideLogin (){
+	document.getElementById("login").style.display = "none";
+	document.getElementById("login").style.zIndex = -1;
+}
+
+eel.expose(showLoad)
+function showLoad (){
+	document.getElementById("load").style.display = "Block";
+	document.getElementById("load").style.zIndex = 300;
+}
+eel.expose(hideLoad)
+function hideLoad (){
+	document.getElementById("load").style.display = "none";
+	document.getElementById("load").style.zIndex = -1;
+}
+
+
+function loginSubmit(){
+	alert("test")
+	user = document.getElementById("loginUser").value;
+	password = document.getElementById("loginPassword").value;
+	save = document.getElementById("loginSavePassword").checked;
+	eel.loginSubmit(user, password, save);
+}
+
 
 
 eel.expose(unload);
