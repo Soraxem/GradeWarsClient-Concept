@@ -112,7 +112,7 @@ def loginSubmit(user, password, save):
 def load():
     global tree
     global root
-    tree = ET.parse('Task5.xml')
+    tree = ET.parse('Task1.xml')
     root = tree.getroot()
     if (root.tag != "task"):
         print("Error! False root argument -> it Has to be 'task' not: '" + root.tag + "'")
