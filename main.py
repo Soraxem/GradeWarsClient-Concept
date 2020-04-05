@@ -17,8 +17,8 @@ tree = ET.parse('Task1.xml')
 root = tree.getroot()
 
 
-url = "http://beringen.odenwilusenz.ch:25577/kak.php"
-myobj = {'': 'Der Hannes'}
+url = "http://beringen.odenwilusenz.ch:25577/GWS/test.php"
+myobj = {'username': 'Johnn', 'password': 'Doe'}
 x = requests.post(url, data = myobj)
 print(x.text)
 
