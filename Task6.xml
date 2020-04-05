@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<task type="text" reply-type="input" input-type="text">
+<task type="img" reply-type="input" input-type="text">
 	<img>http://beringen.odenwilusenz.ch:25577/logo.gif</img>
 	<text>10 * 20</text>
 	<text>Hello World</text>

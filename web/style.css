@@ -59,7 +59,13 @@ img.load {
 td {
 	transition: 0.5s;
 }
+
 h1{
 	font-family: Arial black;
 	font-size: 60;
+}
+
+h2{
+	font-family: Arial black;
+	font-size: 20;
 }

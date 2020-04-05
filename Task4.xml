@@ -2,17 +2,10 @@
 
 <task type="img" reply-type="options">$
 	<img>http://beringen.odenwilusenz.ch:25577/logo.gif</img>
-	<text>Hello World Loool</text>
+	<text>This is a Task</text>
 	<options>
-		<option>420</option>
-		<option>alasdjfl</option>
-		<option>200</option>
-		<option>hh</option>
-	</options>
-	<options>
-		<option>4220</option>
-		<option>asdfa</option>
-		<option>200</option>
-		<option>hh</option>
+		<option>Jes</option>
+		<option>No</option>
+		<option>Propably</option>
 	</options>
 </task>

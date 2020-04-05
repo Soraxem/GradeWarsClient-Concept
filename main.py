@@ -16,6 +16,7 @@ import eel
 tree = ET.parse('Task1.xml')
 root = tree.getroot()
 
+demoTaskNow = 1;
 
 loggedIn = False
 username = ""
@@ -103,6 +104,7 @@ def loadImgTask():
 
 @eel.expose
 def answer(value, form):
+    demo()
     if(form == 1):
         print("taskformat" + str(form) + " awnsered:" + str(value) )
     elif (form == 2):
@@ -129,7 +131,7 @@ def loginSubmit(user, passwordt, save):
             password = passwordt
             eel.hideLoad()
             eel.hideLogin()
-            load()
+            demo()
     else:
         eel.hideLoad()
         print("Login Error!")
@@ -140,11 +142,19 @@ def loginSubmit(user, passwordt, save):
 def login():
     eel.showLogin()
 
+def demo():
+    global demoTaskNow
+    load("Task" + str(demoTaskNow) + ".xml")
+    if (demoTaskNow <= 5):
+        demoTaskNow = demoTaskNow + 1
+    else:
+        demoTaskNow = 1
+
 @eel.expose
-def load():
+def load(task):
     global tree
     global root
-    tree = ET.parse('Task5.xml')
+    tree = ET.parse(task)
     root = tree.getroot()
     if (root.tag != "task"):
         print("Error! False root argument -> it Has to be 'task' not: '" + root.tag + "'")

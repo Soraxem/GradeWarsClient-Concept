@@ -30,8 +30,8 @@ function loadTextTaskNumber(text){
 	document.getElementById("taskTextText").innerHTML = text;
 }
 
-eel.expose(loadTexttextTaskText);
-function loadTexttextTaskText(text){
+eel.expose(loadTextTaskText);
+function loadTextTaskText(text){
 	
 	document.getElementById("textTaskOptions").style.display = "none";
 	document.getElementById("textTaskNumber").style.display = "none";
@@ -80,8 +80,8 @@ function loadImgTaskNumber(text, url){
 	document.getElementById("imgTaskImg").src = url;
 }
 
-eel.expose(loadImgTaskNumber);
-function loadImgTaskNumber(text, url){
+eel.expose(loadImgTaskText);
+function loadImgTaskText(text, url){
 	document.getElementById("textTask").style.opacity = 0;
 	document.getElementById("textTask").style.zIndex= -1;
 	document.getElementById("imgTask").style.opacity = 1;
@@ -132,7 +132,6 @@ eel.expose(unload);
 function unload(){
 	document.getElementById("textTask").style.opacity = 0;
 	document.getElementById("imgTask").style.opacity = 0;
-	document.getElementById("taskFormat3").style.opacity = 0;
 }
 
 
