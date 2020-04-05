@@ -13,7 +13,8 @@ div.login {
 	height: 400px;
 	margin: auto;
 	display: none;
-}
+	text-align: centre;
+} 
 
 div.load {
 	left: calc(50% - 50px);/*calc(position - width/2) */
