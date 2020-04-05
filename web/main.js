@@ -124,3 +124,11 @@ function debugHideTaskFormat1(){
 	document.getElementById("textTask").style.zIndex= -1;
 	document.getElementById("imgTask").style.zIndex= -1;
 }
+
+
+function checkEnterClick(e, id){
+	if(e.keyCode == 13){
+	   value = document.getElementById(id).value
+	   eel.answer(value, 2);
+   }
+}

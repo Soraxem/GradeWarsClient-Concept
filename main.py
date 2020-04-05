@@ -99,8 +99,11 @@ def loadImgTask():
 
 @eel.expose
 def answer(value, form):
-    print("taskformat" + str(form) + " awnsered:" + str(value) )
-
+    if(form == 1):
+        print("taskformat" + str(form) + " awnsered:" + str(value) )
+    elif (form == 2):
+        print("taskformat" + str(form) + " awnsered:" + str(value) )
+    
 
 @eel.expose
 def load():
