@@ -17,10 +17,15 @@ tree = ET.parse('Task1.xml')
 root = tree.getroot()
 
 
+loggedIn = False
+username = ""
+password = ""
+key = ""
+
 url = "http://beringen.odenwilusenz.ch:25577/GWS/test.php"
 myobj = {'username': 'Johnn', 'password': 'Doe'}
-x = requests.post(url, data = myobj)
-print(x.text)
+#x = requests.post(url, data = myobj)
+#print(x.text)
 
 def loadTextTask():
     global tree
@@ -104,15 +109,42 @@ def answer(value, form):
         print("taskformat" + str(form) + " awnsered:" + str(value) )
 
 @eel.expose
-def loginSubmit(user, password, save):
-    print("got login Submit:" + user + password + str(save))
+def loginSubmit(user, passwordt, save):
+    global loggedIn
+    global username
+    global password
+    global key
 
+    eel.showLoad()
+    url = "http://beringen.odenwilusenz.ch:25577/GWS/test.php"
+    myobj = {'username': user, 'password': passwordt}
+    potKey = requests.post(url, data = myobj)
+    print(potKey.text)
+    if (potKey.text != "falseArgs"):
+        key = potKey.text
+        loggedIn = True
+        username = user
+        print("Logged in Succesfully!")
+        if (save):
+            password = passwordt
+            eel.hideLoad()
+            eel.hideLogin()
+            load()
+    else:
+        eel.hideLoad()
+        print("Login Error!")
+    
+    
+        
+@eel.expose
+def login():
+    eel.showLogin()
 
 @eel.expose
 def load():
     global tree
     global root
-    tree = ET.parse('Task1.xml')
+    tree = ET.parse('Task5.xml')
     root = tree.getroot()
     if (root.tag != "task"):
         print("Error! False root argument -> it Has to be 'task' not: '" + root.tag + "'")

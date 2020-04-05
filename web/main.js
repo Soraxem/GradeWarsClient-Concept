@@ -1,4 +1,4 @@
-alert("test")
+eel.login();
 
 eel.expose(loadTextTaskOptions);
 function loadTextTaskOptions(text, table){
@@ -120,7 +120,6 @@ function hideLoad (){
 
 
 function loginSubmit(){
-	alert("test")
 	user = document.getElementById("loginUser").value;
 	password = document.getElementById("loginPassword").value;
 	save = document.getElementById("loginSavePassword").checked;
