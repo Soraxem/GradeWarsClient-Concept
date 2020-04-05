@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<task type="img" reply-type="options">$
+	<img>http://beringen.odenwilusenz.ch:25577/pictures.jpg</img>
+	<text>Hello World</text>
+	<options>
+		<option>420</option>
+		<option>alasdjfl</option>
+		<option>200</option>
+		<option>hh</option>
+	</options>
+	<options>
+		<option>4220</option>
+		<option>asdfa</option>
+		<option>200</option>
+		<option>hh</option>
+	</options>
+</task>

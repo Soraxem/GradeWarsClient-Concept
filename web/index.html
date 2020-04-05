@@ -1,5 +1,6 @@
 <head>
 	<title>Grade Wars</title>
+	<link rel="icon" href="gsw.png">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="/eel.js"></script>
 	<script src="main.js"></script>
@@ -10,27 +11,34 @@
 	
 		<div id="textTask" class="task">
 			
-			<h1 id="taskText">taskFormat1<h1/>
+			<h1 id="taskTextText">taskFormat1<h1/>
 
 			<table id="textTaskOptions" class="center">
 				<tr><td>22</td><td>33</td><td>44</td></tr>
 				<tr><td>22</td><td>33</td><td>44</td></tr>
 			</table>
+			<input id="textTaskNumber"type="number"></input>
+			<input id="textTaskText"type="text"></input>
 
 		</div>
 		
 		<div id="imgTask" class="task">
+			
+			<img id="imgTaskImg" style="max-height: 30vh"></img>
+			<h2 id="taskTextImg">imgTask<h2/>
 
-			<h1 id="taskText">imgTask<h1/>
-
-			<table class="center">
-				<input type="number"></input>
+			<table id="imgTaskOptions" class="center">
+				<tr><td>22</td><td>33</td><td>44</td></tr>
+				<tr><td>22</td><td>33</td><td>44</td></tr>
 			</table>
+			<input id="imgTaskNumber"type="number"></input>
+			<input id="imgTaskText"type="text"></input>
 
 		</div>
 	</div>
 	
 	<a class="temp" style="cursor:pointer; z-index:200" onclick="eel.load()">Test</a>
 	<a class="temp" style="cursor:pointer; z-index:200" onclick="debugShowTaskFormat1()">Task1-Multible chioce</a>
+	<a class="temp" style="cursor:pointer; z-index:200" onclick="debugShowImgFormatOptions()">Task1-Multible chioce</a>
 	<a class="temp" style="cursor:pointer; z-index:200" onclick="debugHideTaskFormat1()">hide All</a>
 </body>
